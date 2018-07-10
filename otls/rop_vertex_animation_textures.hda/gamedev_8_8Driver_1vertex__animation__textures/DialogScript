@@ -92,10 +92,17 @@
             range   { 0 1 }
         }
         parm {
+            name    "export_pivot_path"
+            label   "Pivot Map Path"
+            type    image
+            default { "$HIP/export/${HIPNAME}_piv.exr" }
+            range   { 0 1 }
+        }
+        parm {
             name    "normalize_data"
             label   "Normalize Data to 0-1 space"
             type    toggle
-            default { "1" }
+            default { "0" }
         }
         parm {
             name    "pack_normal"

@@ -31,7 +31,7 @@ Content-Disposition: attachment; filename="hdaroot.def"
 Content-Type: text/plain
 
 comment ""
-position -2.78 0.33
+position 0 0
 connectornextid 0
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -45,8 +45,8 @@ inputs
 }
 stat
 {
-  create 1531220810
-  modify 1531242382
+  create 1531243374
+  modify 1531243510
   author sutheim@digitalsys4.ldn.framestore.com
   access 0777
 }
@@ -54,336 +54,6 @@ color UT_Color RGB 0.8 0.8 0.8
 delscript ""
 exprlanguage hscript
 end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot.spareparmdef"
-Content-Type: text/plain
-
-    parm {
-        name    "execute"
-        baseparm
-        label   "Render"
-        joinnext
-        export  none
-    }
-    parm {
-        name    "renderdialog"
-        baseparm
-        label   "Controls..."
-        nolabel
-        export  none
-    }
-    parm {
-        name    "method"
-        baseparm
-        label   "Method"
-        export  none
-    }
-    parm {
-        name    "export_node"
-        baseparm
-        label   "Export Node"
-        export  none
-    }
-    parm {
-        name    "target_polycount"
-        baseparm
-        label   "Target Polycount"
-        export  none
-    }
-    parm {
-        name    "equalize_edges"
-        baseparm
-        label   "Equalize Edges"
-        export  none
-    }
-    parm {
-        name    "target_texture_size"
-        baseparm
-        label   "Target Texture Size"
-        export  none
-    }
-    groupsimple {
-        name    "folder2"
-        label   "Output Paths"
-
-        parm {
-            name    "mobileexport"
-            baseparm
-            label   "Export For Mobile (Unity)"
-            export  none
-        }
-        parm {
-            name    "export_geo_path"
-            baseparm
-            label   "Geometry Path"
-            export  none
-        }
-        parm {
-            name    "export_position_path"
-            baseparm
-            label   "Position Map Path"
-            export  none
-        }
-        parm {
-            name    "export_pivot_path"
-            label   "Pivot Map Path"
-            type    image
-            default { "$HIP/export/${HIPNAME}_piv.exr" }
-            range   { 0 1 }
-        }
-        parm {
-            name    "normalize_data"
-            baseparm
-            label   "Normalize Data to 0-1 space"
-            export  none
-        }
-        parm {
-            name    "pack_normal"
-            baseparm
-            label   "Pack Normal into Alpha"
-            joinnext
-            export  none
-        }
-        parm {
-            name    "export_normal_path"
-            baseparm
-            label   "Normal Map Path"
-            export  none
-        }
-        parm {
-            name    "rigid_rotation_path"
-            baseparm
-            label   "Rotation Map Path"
-            export  none
-        }
-        parm {
-            name    "export_color_map"
-            baseparm
-            label   "Export Color Map"
-            joinnext
-            export  none
-        }
-        parm {
-            name    "color_path"
-            baseparm
-            label   "Color Map Path"
-            export  none
-        }
-    }
-
-    parm {
-        name    "export_uv_path"
-        baseparm
-        label   "UV Map Path"
-        invisible
-        export  none
-    }
-    parm {
-        name    "export_color_path"
-        baseparm
-        label   "Color Map Path"
-        invisible
-        export  none
-    }
-    groupsimple {
-        name    "folder9"
-        label   "Frame Settings"
-
-        parm {
-            name    "iFrame"
-            baseparm
-            label   "Initial Frame"
-            joinnext
-            export  none
-        }
-        parm {
-            name    "fFrame"
-            baseparm
-            label   "Final Frame"
-            joinnext
-            export  none
-        }
-        parm {
-            name    "iFrameStep"
-            baseparm
-            label   "Frame Step"
-            invisible
-            export  none
-        }
-    }
-
-    groupsimple {
-        name    "folder10"
-        label   "Data For Realtime Shader"
-
-        parm {
-            name    "num_frames"
-            baseparm
-            label   "Number of Frames"
-            joinnext
-            export  none
-        }
-        parm {
-            name    "sepparm"
-            baseparm
-            label   "Separator"
-            export  none
-        }
-        parm {
-            name    "max_value"
-            baseparm
-            label   "BBOX MAX"
-            joinnext
-            export  none
-        }
-        parm {
-            name    "min_value"
-            baseparm
-            label   "BBOX MIN"
-            export  none
-        }
-        parm {
-            name    "max_value2"
-            baseparm
-            label   "BBOX MAX 1"
-            joinnext
-            export  none
-        }
-        parm {
-            name    "min_value2"
-            baseparm
-            label   "BBOX MIN 1"
-            export  none
-        }
-    }
-
-    groupsimple {
-        name    "folder11"
-        label   "Sample UE4 Shader Code (Copy Paste Into a Material)"
-
-        groupcollapsible {
-            name    "folder12"
-            label   "Soft Vertex Animation UE4 code"
-
-            parm {
-                name    "soft_code"
-                baseparm
-                label   "SoftVertexAnimation ShaderCode"
-                export  none
-            }
-        }
-
-        groupcollapsible {
-            name    "folder13"
-            label   "Rigid Vertex Animation UE4 code"
-
-            parm {
-                name    "rigid_code"
-                baseparm
-                label   "RigidVertexAnimation ShaderCode"
-                export  none
-            }
-        }
-
-        groupcollapsible {
-            name    "folder14"
-            label   "Fluid Vertex Animation UE4 code"
-
-            parm {
-                name    "fluid_code"
-                baseparm
-                label   "FluidVertexAnimation ShaderCode"
-                export  none
-            }
-        }
-
-        groupcollapsible {
-            name    "folder15"
-            label   "Sprite Vertex Animation UE4 code"
-
-            parm {
-                name    "sprite_code"
-                baseparm
-                label   "SpriteVertexAnimation ShaderCode"
-                export  none
-            }
-        }
-
-    }
-
-    group {
-        name    "advanced_folder2"
-        label   "Advanced"
-
-        parm {
-            name    "cloth_delta_export_attribute"
-            baseparm
-            label   "Delta Export Attribute (P)"
-            export  none
-        }
-        parm {
-            name    "cloth_frame_export_attribute"
-            baseparm
-            label   "Frame Export Attribute (N)"
-            export  none
-        }
-        parm {
-            name    "rbd_delta_export_attribute"
-            baseparm
-            label   "Delta Export Attribute (P)"
-            export  none
-        }
-        parm {
-            name    "rbd_rest_export_attribute"
-            baseparm
-            label   "Rest Export Attribute (rest)"
-            export  none
-        }
-        parm {
-            name    "rbd_frame_export_attribute"
-            baseparm
-            label   "Frame Export Attribute (orient)"
-            export  none
-        }
-        parm {
-            name    "fluid_delta_export_attribute"
-            baseparm
-            label   "Delta Export Attribute (P)"
-            export  none
-        }
-        parm {
-            name    "fluid_colour_export_attribute"
-            baseparm
-            label   "Colour Export Attribute (Cd)"
-            export  none
-        }
-        parm {
-            name    "fluid_frame_export_attribute"
-            baseparm
-            label   "Frame Export Attribute (N)"
-            export  none
-        }
-        parm {
-            name    "sprite_delta_export_attribute"
-            baseparm
-            label   "Delta Export Attribute (P)"
-            export  none
-        }
-        parm {
-            name    "sprite_colour_export_attribute"
-            baseparm
-            label   "Colour Export Attribute (Cd)"
-            export  none
-        }
-        parm {
-            name    "sprite_alpha_export_attribute"
-            baseparm
-            label   "Colour Export Attribute (Alpha)"
-            export  none
-        }
-    }
-
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.userdata"
@@ -422,7 +92,7 @@ Content-Type: text/plain
 }
 {
   create 1480965977
-  modify 1531242354
+  modify 1531243384
   author Luiz@Luiz-PC
   access 0777
 }
@@ -445,7 +115,7 @@ Content-Type: text/plain
 }
 {
   create 1480966065
-  modify 1531242347
+  modify 1531243377
   author Luiz@Luiz-PC
   access 0777
 }
@@ -468,7 +138,7 @@ Content-Type: text/plain
 }
 {
   create 1480966168
-  modify 1531242354
+  modify 1531243384
   author Luiz@Luiz-PC
   access 0777
 }
@@ -491,7 +161,7 @@ Content-Type: text/plain
 }
 {
   create 1480966168
-  modify 1531242351
+  modify 1531243381
   author Luiz@Luiz-PC
   access 0777
 }
@@ -1523,7 +1193,7 @@ inputs
 stat
 {
   create 1479856537
-  modify 1531242451
+  modify 1531243467
   author Luiz@Luiz-PC
   access 0777
 }
@@ -6476,7 +6146,7 @@ inputs
 stat
 {
   create 1479856537
-  modify 1531242451
+  modify 1531243467
   author Luiz@Luiz-PC
   access 0777
 }
@@ -14651,7 +14321,7 @@ inputs
 stat
 {
   create 1479856537
-  modify 1531242451
+  modify 1531243467
   author Luiz@Luiz-PC
   access 0777
 }
@@ -21396,7 +21066,7 @@ inputs
 stat
 {
   create 1479856537
-  modify 1531242451
+  modify 1531243467
   author Luiz@Luiz-PC
   access 0777
 }
@@ -29437,7 +29107,7 @@ inputs
 stat
 {
   create 1499288894
-  modify 1531222965
+  modify 1531243407
   author mikel@mikembp-sesi.local
   access 0777
 }
@@ -38029,7 +37699,7 @@ inputs
 stat
 {
   create 1499288894
-  modify 1531242344
+  modify 1531243407
   author mikel@mikembp-sesi.local
   access 0777
 }
@@ -38992,7 +38662,7 @@ idominance	[ 0	locks=0 ]	(	"odd"	)
 overriderange	[ 0	locks=0 ]	(	"off"	)
 singleimage	[ 0	locks=0 ]	(	"off"	)
 start	[ 0	locks=0 ]	(	[ start	1 ] 	)
-length	[ 0	locks=0 ]	(	[ length	320 ] 	)
+length	[ 0	locks=0 ]	(	[ length	240 ] 	)
 preextend	[ 0	locks=0 ]	(	"black"	)
 prehold	[ 0	locks=0 ]	(	0	)
 postextend	[ 0	locks=0 ]	(	"black"	)
@@ -39000,7 +38670,7 @@ posthold	[ 0	locks=0 ]	(	0	)
 stdswitcher5	[ 0	locks=0 ]	(	2	2	2	2	)
 geo	[ 0	locks=0 ]	(	op:`opfullpath(\"../../rigid_obj/TEXTURE_MESH/OUT\")	)
 Target_Texture_Size	[ 8	locks=0 ]	(	[ Target_Texture_Size	1024 ] 	)
-No_Of_Points	[ 8	locks=0 ]	(	[ No_Of_Points	532 ] 	)
+No_Of_Points	[ 8	locks=0 ]	(	[ No_Of_Points	0 ] 	)
 rbd_frame_export_attribute	[ 0	locks=0 ]	(	`chs(\"../../rbd_frame_export_attribute\")`	)
 }
 
@@ -41807,7 +41477,7 @@ idominance	[ 0	locks=0 ]	(	"odd"	)
 overriderange	[ 0	locks=0 ]	(	"off"	)
 singleimage	[ 0	locks=0 ]	(	"off"	)
 start	[ 0	locks=0 ]	(	[ start	1 ] 	)
-length	[ 0	locks=0 ]	(	[ length	320 ] 	)
+length	[ 0	locks=0 ]	(	[ length	240 ] 	)
 preextend	[ 0	locks=0 ]	(	"black"	)
 prehold	[ 0	locks=0 ]	(	0	)
 postextend	[ 0	locks=0 ]	(	"black"	)
@@ -45711,7 +45381,7 @@ inputs
 stat
 {
   create 1499288894
-  modify 1531222965
+  modify 1531243407
   author mikel@mikembp-sesi.local
   access 0777
 }
@@ -54334,7 +54004,7 @@ inputs
 stat
 {
   create 1499288894
-  modify 1531222965
+  modify 1531243407
   author mikel@mikembp-sesi.local
   access 0777
 }
@@ -57564,7 +57234,7 @@ Content-Type: text/plain
 version 0.8
 itermethod	[ 0	locks=0 ]	(	"count"	)
 method	[ 0	locks=0 ]	(	"merge"	)
-iterations	[ 8	locks=0 ]	(	[ iterations	319 ] 	)
+iterations	[ 8	locks=0 ]	(	[ iterations	239 ] 	)
 startvalue	[ 0	locks=0 ]	(	1	)
 increment	[ 0	locks=0 ]	(	1	)
 class	[ 0	locks=0 ]	(	"primitive"	)
@@ -57745,7 +57415,7 @@ Content-Type: text/plain
 {
 version 0.8
 method	[ 0	locks=0 ]	(	"byframe"	)
-frame	[ 8	locks=0 ]	(	[ frame	319 ] 	)
+frame	[ 8	locks=0 ]	(	[ frame	239 ] 	)
 integerframe	[ 0	locks=0 ]	(	"on"	)
 time	[ 0	locks=0 ]	(	[ time	0 ] 	)
 rangeclamp	[ 0	locks=0 ]	(	"none"	)
@@ -57792,7 +57462,7 @@ inputs
 stat
 {
   create 1500045920
-  modify 1531242381
+  modify 1531243676
   author mikel@mikembp-sesi.local
   access 0777
 }
@@ -78246,7 +77916,7 @@ maskplane	[ 0	locks=0 ]	(	A	)
 maskresize	[ 0	locks=0 ]	(	"off"	)
 maskinvert	[ 0	locks=0 ]	(	"off"	)
 overridesize	[ 0	locks=0 ]	(	"on"	)
-size	[ 8	locks=0 ]	(	[ size1	532 ] 	[ size2	319 ] 	)
+size	[ 8	locks=0 ]	(	[ size1	0 ] 	[ size2	0 ] 	)
 sizemenu	[ 0	locks=0 ]	(	0	)
 overrideaspect	[ 0	locks=0 ]	(	"off"	)
 aspect	[ 0	locks=0 ]	(	[ aspect	1 ] 	)
@@ -78264,7 +77934,7 @@ idominance	[ 0	locks=0 ]	(	"odd"	)
 overriderange	[ 0	locks=0 ]	(	"off"	)
 singleimage	[ 0	locks=0 ]	(	"off"	)
 start	[ 0	locks=0 ]	(	[ start	1 ] 	)
-length	[ 0	locks=0 ]	(	[ length	320 ] 	)
+length	[ 0	locks=0 ]	(	[ length	240 ] 	)
 preextend	[ 0	locks=0 ]	(	"black"	)
 prehold	[ 0	locks=0 ]	(	0	)
 postextend	[ 0	locks=0 ]	(	"black"	)
@@ -80048,7 +79718,7 @@ maskplane	[ 0	locks=0 ]	(	A	)
 maskresize	[ 0	locks=0 ]	(	"off"	)
 maskinvert	[ 0	locks=0 ]	(	"off"	)
 overridesize	[ 0	locks=0 ]	(	"on"	)
-size	[ 8	locks=0 ]	(	[ size1	532 ] 	[ size2	1 ] 	)
+size	[ 8	locks=0 ]	(	[ size1	0 ] 	[ size2	1 ] 	)
 sizemenu	[ 0	locks=0 ]	(	0	)
 overrideaspect	[ 0	locks=0 ]	(	"off"	)
 aspect	[ 0	locks=0 ]	(	[ aspect	1 ] 	)
@@ -80066,7 +79736,7 @@ idominance	[ 0	locks=0 ]	(	"odd"	)
 overriderange	[ 0	locks=0 ]	(	"off"	)
 singleimage	[ 0	locks=0 ]	(	"off"	)
 start	[ 0	locks=0 ]	(	[ start	1 ] 	)
-length	[ 0	locks=0 ]	(	[ length	320 ] 	)
+length	[ 0	locks=0 ]	(	[ length	240 ] 	)
 preextend	[ 0	locks=0 ]	(	"black"	)
 prehold	[ 0	locks=0 ]	(	0	)
 postextend	[ 0	locks=0 ]	(	"black"	)
@@ -84824,7 +84494,7 @@ version 0.8
 execute	[ 0	locks=0 ]	(	0	)
 renderdialog	[ 0	locks=0 ]	(	0	)
 trange	[ 0	locks=0 ]	(	"off"	)
-f	[ 0	locks=0 ]	(	[ f1	1 ] 	[ f2	320 ] 	1	)
+f	[ 0	locks=0 ]	(	[ f1	1 ] 	[ f2	240 ] 	1	)
 take	[ 0	locks=0 ]	(	_current_	)
 sopoutput	[ 0	locks=0 ]	(	`chs(\"../export_geo_path\")`	)
 mkpath	[ 0	locks=0 ]	(	"on"	)
@@ -86213,7 +85883,7 @@ inputs
 stat
 {
   create 1500047215
-  modify 1531242381
+  modify 1531243445
   author mikel@mikembp-sesi.local
   access 0777
 }
@@ -86257,9 +85927,9 @@ take	[ 0	locks=0 ]	(	_current_	)
 copswitcher	[ 0	locks=0 ]	(	0	0	0	0	0	)
 coppath	[ 0	locks=0 ]	(	../rbd_copnet/ORIENT	)
 tres	[ 0	locks=0 ]	(	"natural"	)
-res	[ 0	locks=0 ]	(	532	319	)
+res	[ 0	locks=0 ]	(	1	1	)
 resmenu	[ 0	locks=0 ]	(	0	)
-copoutput	[ 0	locks=0 ]	(	`chs(\"../rigid_rotation_path\")`	)
+copoutput	[ 8	locks=0 ]	(	`chs(\"../rigid_rotation_path\")`	)
 mkpath	[ 0	locks=0 ]	(	"on"	)
 color	[ 0	locks=0 ]	(	C	)
 alpha	[ 0	locks=0 ]	(	A	)
@@ -86272,7 +85942,7 @@ batchmode	[ 0	locks=0 ]	(	"off"	)
 batchsize	[ 0	locks=0 ]	(	2	)
 reloadfiles	[ 0	locks=0 ]	(	"off"	)
 outputarea	[ 0	locks=0 ]	(	"frame"	)
-pixelcrop	[ 0	locks=0 ]	(	0	0	531	318	)
+pixelcrop	[ 0	locks=0 ]	(	0	0	0	0	)
 uvcrop	[ 0	locks=0 ]	(	0	0	1	1	)
 limitcanvaspixels	[ 0	locks=0 ]	(	"on"	)
 canvaspixels	[ 0	locks=0 ]	(	64	)
@@ -87654,7 +87324,7 @@ inputs
 stat
 {
   create 1500047215
-  modify 1531242381
+  modify 1531243439
   author mikel@mikembp-sesi.local
   access 0777
 }
@@ -87698,9 +87368,9 @@ take	[ 0	locks=0 ]	(	_current_	)
 copswitcher	[ 0	locks=0 ]	(	0	0	0	0	0	)
 coppath	[ 0	locks=0 ]	(	../rbd_copnet/PIVOT	)
 tres	[ 0	locks=0 ]	(	"natural"	)
-res	[ 0	locks=0 ]	(	532	1	)
+res	[ 0	locks=0 ]	(	1	1	)
 resmenu	[ 0	locks=0 ]	(	0	)
-copoutput	[ 0	locks=0 ]	(	`chs(\"../export_pivot_path\")`	)
+copoutput	[ 8	locks=0 ]	(	`chs(\"../export_pivot_path\")`	)
 mkpath	[ 0	locks=0 ]	(	"on"	)
 color	[ 0	locks=0 ]	(	C	)
 alpha	[ 0	locks=0 ]	(	A	)
@@ -87713,7 +87383,7 @@ batchmode	[ 0	locks=0 ]	(	"off"	)
 batchsize	[ 0	locks=0 ]	(	2	)
 reloadfiles	[ 0	locks=0 ]	(	"off"	)
 outputarea	[ 0	locks=0 ]	(	"frame"	)
-pixelcrop	[ 0	locks=0 ]	(	0	0	531	0	)
+pixelcrop	[ 0	locks=0 ]	(	0	0	0	0	)
 uvcrop	[ 0	locks=0 ]	(	0	0	1	1	)
 limitcanvaspixels	[ 0	locks=0 ]	(	"on"	)
 canvaspixels	[ 0	locks=0 ]	(	64	)
